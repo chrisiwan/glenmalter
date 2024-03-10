@@ -19,30 +19,32 @@
 
 
 <header>
-	<div class="container">
-
-		<div id="logo"><a href="index.html">
-			<h4>GLENMALTER</h4></a>
+	<div class="navbar">
+		<div class="logo">			<h4>GLENMALTER</h4>
 		</div>
-
-
-		<nav>
-			<ul id="navMain mm">
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="shop.html">Shop</a>
-					<ul class="sm hidden">
-						<li><a href="shop.html">Whisky</a></li>
-						<li><a href="shop.html">Accessories</a></li>
-						<li><a href="shop.html">Other</a></li>
-					</ul>
-				</li>
-				<li><a href="distillery.html">Distillery</a></li>
-				<li><a href="contact.html">Contact</a></li>		
-
-			</ul>
-		</nav>
-
-	</div>
+		<div class="toggle-button">
+		  <div class="bar"></div>
+		  <div class="bar"></div>
+		  <div class="bar"></div>
+		</div>
+		<ul class="nav-links">
+		  <li><a href='index.html'>Home</a></li>
+		  <li><a href="aboutus.html">About</a></li>
+		  <li><a href="shop.html">Shop</a></li>
+		  <li><a href="distillery.html">Distillery</a></li>
+		  <li><a href='contact.html'>Contact</a></li>
+		</ul>
+	  </div>
+	  <script type="text/javascript">
+		const toggleButton = document.querySelector('.toggle-button')
+		const navLinks = document.querySelector('.nav-links')
+		window.onload=function(){
+		  toggleButton.addEventListener('click',()=>{
+		  navLinks.classList.toggle('active');
+		  console.log('clicked')
+		})
+		}
+	  </script>
 </header>
 
 
